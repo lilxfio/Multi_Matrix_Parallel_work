@@ -8,7 +8,7 @@ double matrix_multiply(int M, int N, int W, int** A, int** B, int** C, int num_t
     double start_time = omp_get_wtime(); // Start timing
 
     // Parallel region for matrix multiplication
-    #pragma omp parallel for num_threads(num_threads) collapse(2)
+    #pragma omp parallel for num_threads(num_threads) collapse(2) schedule(dynamic)
     for (int i = 0; i < M; i++) {
         for (int j = 0; j < W; j++) {
             C[i][j] = 0;
