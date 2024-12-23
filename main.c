@@ -11,7 +11,7 @@ int main() {
     srand(time(NULL)); // Seed for random number generation
 
     // Matrix dimensions for the problem
-    int M = 3000, N = 4200, W = 2300;
+    int M = 2000, N = 3200, W = 1700;
     printf("Matrix dimensions: M = %d, N = %d, W = %d\n", M, N, W);
 
     // Allocate memory for matrices
