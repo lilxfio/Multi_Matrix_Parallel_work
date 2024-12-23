@@ -11,7 +11,7 @@ int main() {
     srand(time(NULL)); // Seed for random number generation
 
     // Matrix dimensions for the problem
-    int M = 10000, N = 15000, W = 13000;
+    int M = 1000, N = 1200, W = 1300;
     printf("Matrix dimensions: M = %d, N = %d, W = %d\n", M, N, W);
 
     // Allocate memory for matrices
@@ -34,12 +34,19 @@ int main() {
     double speedup_2 = calculate_speedup_percentage(serial_time, parallel_time_2);
     double speedup_4 = calculate_speedup_percentage(serial_time, parallel_time_4);
     double speedup_max = calculate_speedup_percentage(serial_time, parallel_time_max);
-
+       
+        printf(" "); 
+     // Print performance metrics
+    printf("Speedup time with 2 threads: %f%%\n", serial_time/speedup_2);
+    printf("Speedup time with 4 threads: %f%%\n", serial_time/speedup_4);
+    printf("Speedup time with max threads (%d): %f%%\n", max_threads, serial_time/speedup_max);
+    ///
+        printf(" ");
     // Print performance metrics
     printf("Speedup percentage with 2 threads: %f%%\n", speedup_2);
     printf("Speedup percentage with 4 threads: %f%%\n", speedup_4);
     printf("Speedup percentage with max threads (%d): %f%%\n", max_threads, speedup_max);
-
+    
     // Determine the best performance improvement
     double best_speedup = speedup_2;
     if (speedup_4 > best_speedup) best_speedup = speedup_4;
@@ -53,3 +60,4 @@ int main() {
 
     return 0;
 }
+
