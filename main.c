@@ -11,7 +11,7 @@ int main() {
     srand(time(NULL)); // Seed for random number generation
 
     // Matrix dimensions for the problem
-    int M = 1000, N = 1200, W = 1300;
+    int M = 3000, N = 4200, W = 2300;
     printf("Matrix dimensions: M = %d, N = %d, W = %d\n", M, N, W);
 
     // Allocate memory for matrices
@@ -37,9 +37,9 @@ int main() {
        
         printf("\n"); 
      // Print performance metrics
-    printf("Speedup time with 2 threads: %f%%\n", serial_time/speedup_2);
-    printf("Speedup time with 4 threads: %f%%\n", serial_time/speedup_4);
-    printf("Speedup time with max threads (%d): %f%%\n", max_threads, serial_time/speedup_max);
+    printf("Speedup time with 2 threads: %f\n", serial_time/speedup_2);
+    printf("Speedup time with 4 threads: %f\n", serial_time/speedup_4);
+    printf("Speedup time with max threads (%d): %f\n", max_threads, serial_time/speedup_max);
     ///
         printf("\n");
     // Print performance metrics
