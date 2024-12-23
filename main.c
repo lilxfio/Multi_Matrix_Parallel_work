@@ -35,13 +35,13 @@ int main() {
     double speedup_4 = calculate_speedup_percentage(serial_time, parallel_time_4);
     double speedup_max = calculate_speedup_percentage(serial_time, parallel_time_max);
        
-        printf(" "); 
+        printf("\n"); 
      // Print performance metrics
     printf("Speedup time with 2 threads: %f%%\n", serial_time/speedup_2);
     printf("Speedup time with 4 threads: %f%%\n", serial_time/speedup_4);
     printf("Speedup time with max threads (%d): %f%%\n", max_threads, serial_time/speedup_max);
     ///
-        printf(" ");
+        printf("\n");
     // Print performance metrics
     printf("Speedup percentage with 2 threads: %f%%\n", speedup_2);
     printf("Speedup percentage with 4 threads: %f%%\n", speedup_4);
